@@ -37,7 +37,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ url('/reserve/show') }}">
           <i class="fas fa-fw fa-folder"></i>
           <span>รายววิชาที่จอง</span>
         </a>

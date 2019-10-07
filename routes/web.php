@@ -55,9 +55,11 @@ Route::middleware(['auth', 'role:student'])->group(function () {
     Route::put('/student/{id}', 'student\StudentController@update');
 
     Route::get('/reserve','student\ReservaController@index');
-    Route::get('/reserve/create','student\ReservaController@create');
-    Route::post('/reserve/{id}','student\ReservaController@store');
-    Route::get('/reserve/{id}','student\ReservaController@show');
+    Route::get('/reserve/{id}/create','student\ReservaController@create_reserve_subject');
+    //Route::get('/reserve/create','student\ReservaController@create'); ไม่ได้ใช้
+    Route::post('/reserve','student\ReservaController@store');
+    Route::get('/reserve/show','student\ReservaController@show_subject_by_stud_id');
+    //Route::get('/reserve/{id}','student\ReservaController@show');
     Route::get('/reserve/{id}/edit','student\ReservaController@edit');
     Route::put('/reserve/{id}','student\ReservaController@update');
     Route::delete('/reserve/{id}','student\ReservaController@destroy');
