@@ -67,12 +67,11 @@ class ReservaController extends Controller
      */
     public function show_subject_by_stud_id()
     {
-    
-
-    $subjects = DB::table('reserves')->where('stud_id', Auth::user()->stud_id )->get();
-    return view('reserve.show',compact('subjects'));
+    $reserves = DB::table('reserves')->where('stud_id', Auth::user()->stud_id )
+                ->join('subjects', 'reserves.subject_id', '=', 'subjects.subject_id')
+                ->get();
+    return view('reserve.show',compact('reserves'));
     }
-
 
     public function show($id)
     {

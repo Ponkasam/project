@@ -7,7 +7,7 @@
         <table class="table table-bordered mt-2">
             <thead>
                 <tr>
-                    <th>#</th>
+                    
                     <th>รหัสวิชา</th>
                     <th>ชื่อวิชา</th>
                     <th>ห้องเรียน</th>
@@ -17,15 +17,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($subjects as $subjects)
+                @foreach($reserves as $reserves)
                     <tr>
-                        <td>{{ $subjects->id }}</td>
-                        <td>{{ $subjects->subject_id }}</td>
                         
-                        <td>{{ $subjects->term }}</td>
+                        <td>{{ $reserves->subject_id }}</td>
+                        <td>{{ $reserves->subject_name }}</td>
+                        <td>{{ $reserves->teacher }}</td>
+                        <td>{{ $reserves->term }}</td>
                         
                     </tr>
                 @endforeach
+               
             </tbody>
         </table>
     </div>

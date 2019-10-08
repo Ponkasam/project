@@ -29,7 +29,7 @@
                             <div class="btn-group" role="group">
                                 
                                 <a href="{{ url('/reserve/'. $item->id .'/create') }}"><button class="btn btn-warning" type="button">จองจ้า</button></a>
-                             
+                                
                             </div>
                         </td>
                     </tr>
