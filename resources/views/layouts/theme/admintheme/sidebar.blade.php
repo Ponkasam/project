@@ -46,7 +46,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('all') }}">
           <i class="fas fa-fw fa-folder"></i>
-          <span>รายงาน</span>
+          <span>ข้อเสนอแนะ</span>
         </a>
       </li>
 
