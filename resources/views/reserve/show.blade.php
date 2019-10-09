@@ -7,6 +7,7 @@
         <table class="table table-bordered mt-2">
             <thead>
                 <tr>
+                    
                     <th>รหัสวิชา</th>
                     <th>ชื่อวิชา</th>
                     <th>ห้องเรียน</th>
@@ -25,6 +26,7 @@
                         <td>{{ $item->term}}</td>
                     </tr>
                 @endforeach
+               
             </tbody>
         </table>
     </div>

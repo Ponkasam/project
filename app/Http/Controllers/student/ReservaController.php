@@ -74,7 +74,6 @@ class ReservaController extends Controller
         return view('reserve.show',compact('reserves'));
     }
 
-
     public function show($id)
     {
        
