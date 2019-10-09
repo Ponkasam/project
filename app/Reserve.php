@@ -11,4 +11,8 @@ class Reserve extends Model
     protected $fillable = [
         'subject_id','term','YML','stud_id'
     ];
+
+    public function revers(){
+        return $this->belongsTo('App\Subject','subject_id');
+    }
 }

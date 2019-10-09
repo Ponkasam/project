@@ -39,12 +39,12 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('/reserve/show') }}">
           <i class="fas fa-fw fa-folder"></i>
-          <span>รายววิชาที่จอง</span>
+          <span>รายวิชาที่จอง</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ url('/suggestion') }}">
           <i class="fas fa-fw fa-folder"></i>
           <span>ข้อเสนอแนะ</span>
         </a>

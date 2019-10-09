@@ -30,7 +30,7 @@
                                 type="button">แสดง</button></a>
                         <a href="{{ url('/admin/' . $user->id . '/edit') }}"><button class="btn btn-warning"
                                 type="button">แก้ไข</button></a>
-                        <form action="{{ url('/admin/' . $user->id) }}" method="POST">
+                        <form action="{{ url('/admin/' . $user->id) }}"method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button class="btn btn-danger" type="submit">ลบข้อมูล</button>

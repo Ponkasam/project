@@ -40,6 +40,9 @@ Route::middleware(['auth','role:admin'])->group(function () {
     Route::get('/subject/{id}/edit', 'admin\SubjectController@edit');
     Route::put('/subject/{id}', 'admin\SubjectController@update');
     Route::delete('/subject/{id}', 'admin\SubjectController@destroy');
+
+    Route::get('/all', 'admin\AllCommentController@index');
+    Route::delete('/all/{id}','admin\AllCommentController@destroy');
 });
 
 Route::middleware(['auth', 'role:teacher'])->group(function () {
@@ -47,6 +50,9 @@ Route::middleware(['auth', 'role:teacher'])->group(function () {
     Route::get('/teacher', 'teacher\TeacherController@index');
     Route::get('/teacher/{id}/edit', 'teacher\TeacherController@edit');
     Route::put('/teacher/{id}', 'teacher\TeacherController@update');
+
+    Route::get('/comment','teacher\CommentController@index');
+    Route::post('/comment','teacher\CommentController@store');
 });
 
 Route::middleware(['auth', 'role:student'])->group(function () {
@@ -63,4 +69,7 @@ Route::middleware(['auth', 'role:student'])->group(function () {
     Route::get('/reserve/{id}/edit','student\ReservaController@edit');
     Route::put('/reserve/{id}','student\ReservaController@update');
     Route::delete('/reserve/{id}','student\ReservaController@destroy');
+
+    Route::get('/suggestion', 'student\SuggestionController@index');
+    Route::post('/suggestion', 'student\SuggestionController@store');
 });

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservesTable extends Migration
+class CreateSuggestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateReservesTable extends Migration
      */
     public function up()
     {
-        Schema::create('reserves', function (Blueprint $table) {
+        Schema::create('suggestions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('subject_id');
-            $table->integer('term');
-            $table->string('YML')->nullable();
-            $table->bigInteger('stud_id');
+            $table->string('suggestion');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateReservesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reserves');
+        Schema::dropIfExists('suggestions');
     }
 }
