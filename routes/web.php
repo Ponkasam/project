@@ -53,6 +53,15 @@ Route::middleware(['auth', 'role:teacher'])->group(function () {
 
     Route::get('/comment','teacher\CommentController@index');
     Route::post('/comment','teacher\CommentController@store');
+
+    Route::get('/edit', 'teacher\EditSubjectController@index');
+    Route::get('/edit/create', 'teacher\EditSubjectController@create');
+    Route::post('/edit', 'teacher\EditSubjectController@store');
+    Route::get('/edit/{id}', 'teacher\EditSubjectController@show');
+    Route::get('/edit/{id}/edit', 'teacher\EditSubjectController@edit');
+    Route::put('/edit/{id}', 'teacher\EditSubjectController@update');
+    Route::delete('/edit/{id}', 'teacher\EditSubjectController@destroy');
+
 });
 
 Route::middleware(['auth', 'role:student'])->group(function () {

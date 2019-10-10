@@ -29,9 +29,16 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+      <a class="nav-link collapsed" href="{{ url('/edit') }}">
           <i class="fas fa-fw fa-folder"></i>
           <span>จัดการข้อมูลรายวิชา</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+      <a class="nav-link collapsed" href="#">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>อนุมัติการจองรายวิชา</span>
         </a>
       </li>
 
