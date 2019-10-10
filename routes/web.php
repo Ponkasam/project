@@ -48,7 +48,7 @@ Route::middleware(['auth','role:admin'])->group(function () {
 Route::middleware(['auth', 'role:teacher'])->group(function () {
     // Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/teacher', 'teacher\TeacherController@index');
-    Route::get('/teacher/{id}/edit', 'teacher\TeacherController@edit');
+    Route::get('/teacher/{id}/edit', 'teacher\TeacherController@edit'); 
     Route::put('/teacher/{id}', 'teacher\TeacherController@update');
 
     Route::get('/comment','teacher\CommentController@index');
@@ -61,6 +61,10 @@ Route::middleware(['auth', 'role:teacher'])->group(function () {
     Route::get('/edit/{id}/edit', 'teacher\EditSubjectController@edit');
     Route::put('/edit/{id}', 'teacher\EditSubjectController@update');
     Route::delete('/edit/{id}', 'teacher\EditSubjectController@destroy');
+    
+    Route::get('/teacher/confirm', 'teacher\ConfirmController@index'); //พึ่งแก้
+    Route::get('/teacher/{id}', 'teacher\ConfirmController@show');
+    Route::put('/teacher/{id}', 'teacher\ConfirmController@update');
 
 });
 
@@ -74,6 +78,7 @@ Route::middleware(['auth', 'role:student'])->group(function () {
     //Route::get('/reserve/create','student\ReservaController@create'); ไม่ได้ใช้
     Route::post('/reserve','student\ReservaController@store');
     Route::get('/reserve/show','student\ReservaController@show_subject_by_stud_id');
+
     //Route::get('/reserve/{id}','student\ReservaController@show');
     Route::get('/reserve/{id}/edit','student\ReservaController@edit');
     Route::put('/reserve/{id}','student\ReservaController@update');

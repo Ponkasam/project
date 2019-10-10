@@ -9,7 +9,7 @@ class Reserve extends Model
     protected $table = 'reserves';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'subject_id','term','YML','stud_id'
+        'subject_id','term','YML','stud_id','status_re'
     ];
 
     public function revers(){
