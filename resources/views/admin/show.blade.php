@@ -5,7 +5,7 @@
         <h4 class="display-8 mt-5">ข้อมูลรายชื่อ</h4>
         <form action="#">
             <div class="form-group row ml-5">
-                <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสนักศึกษา</label>
+                <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสมาชิก</label>
                 <div class="col-sm-10">
                     <input type="text" readonly class="form-control-plaintext" id="stud_id" value="{{ $user->stud_id }}">
                 </div>

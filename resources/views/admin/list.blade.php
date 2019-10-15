@@ -6,7 +6,7 @@
         <thead class="text-center">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">รหัสนักศึกษา</th>
+                <th scope="col">รหัสมาชิก</th>
                 <th scope="col">ชื่อ</th>
                 <th scope="col">นามสกุล</th>
                 <th scope="col">วัน/เดือน/ปี</th>

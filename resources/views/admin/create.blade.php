@@ -8,7 +8,7 @@
         {{ method_field('POST') }}
 
         <div class="form-group row">
-            <label for="stud_id" class="col-md-4 col-form-label text-md-right mt-2">รหัสนักศึกษา</label>
+            <label for="stud_id" class="col-md-4 col-form-label text-md-right mt-2">รหัสมาชิก</label>
             <div class="col-md-6 mt-2">
                 <input id="stud_id" type="text" class="form-control"  name="stud_id">
             </div>

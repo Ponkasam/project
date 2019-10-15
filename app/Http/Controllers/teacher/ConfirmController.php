@@ -76,7 +76,7 @@ class ConfirmController extends Controller
     {
         $item = $request->all();
         $subject = Reserve::findOrFail($id)->update($item);
-        return redirect('teacher/confirm');
+        return redirect()->back();
     }
 
     /**

@@ -10,25 +10,25 @@
             <div class="form-group row ml-5">
                 <label for="subject_id" class="col-sm-2 col-form-label mt-2">รหัสวิชา</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subject_id" name="subject_id" value="{{ isset($subject->subject_id) ? $subject->subject_id:'' }}">
+                    <input type="text" class="form-control" id="subject_id" name="subject_id" readonly="readoonly" value="{{ isset($subject->subject_id) ? $subject->subject_id:'' }}">
                 </div>
             </div>
             <div class="form-group row ml-5">
                 <label for="subject_name" class="col-sm-2 col-form-label mt-2">ชื่อวิชา</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subject_name" value="{{ isset($subject->subject_name) ? $subject->subject_name: '' }}">
+                    <input type="text" class="form-control" id="subject_name" readonly="readoonly" value="{{ isset($subject->subject_name) ? $subject->subject_name: '' }}">
                 </div>
             </div>
             <div class="form-group row ml-5">
-                <label for="class_room" class="col-sm-2 col-form-label mt-2">ห้องเรียน</label>
+                <label for="class_room" class="col-sm-2 col-form-label mt-2"  >ห้องเรียน</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="class_room"  value="{{ isset($subject->class_room) ? $subject->class_room: '' }}">
+                    <input type="text" class="form-control" id="class_room" readonly="readoonly"  value="{{ isset($subject->class_room) ? $subject->class_room: '' }}">
                 </div>
             </div>
             <div class="form-group row ml-5">
                 <label for="subject_time" class="col-sm-2 col-form-label mt-2">เวลาเรียน</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subject_time" value="{{ isset($subject->subject_time) ? $subject->subject_time: '' }}">
+                    <input type="text" class="form-control" id="subject_time" readonly="readoonly" value="{{ isset($subject->subject_time) ? $subject->subject_time: '' }}">
                 </div>
             </div>
             {{-- <div class="form-group row ml-5">
@@ -37,7 +37,7 @@
                     <input type="text" class="form-control" id="day_id" name="day_id" value="{{ isset($subject->day_id) ? $subject->day_id: '' }}">
                 </div>
             </div> --}}
-            <div class="form-group row ml-5">
+            {{-- <div class="form-group row ml-5">
                 <label for="day_id" class="col-sm-2 col-form-lable mt-2">วันที่เรียน</label>
                 <div class="col-sm-10">
                     <select  id="day_id" class="custom-select">
@@ -47,23 +47,35 @@
                         @endforeach
                     </select>
                 </div>
+            </div> --}}
+            <div class="form-group row ml-5">
+                <label for="day_id" class="col-sm-2 col-form-lable mt-2">วันที่เรียน</label>
+                <div class="col-sm-10">
+                    {{-- <select  id="day_id" class="custom-select">
+                        <option aria-readonly="true">{{ isset($subject->days->day_name) ? $subject->days->day_name:'' }}</option>
+                        @foreach($day as $item)
+                            <option value="{{ $item->day_id }}">{{ $item->day_name }}</option>
+                        @endforeach
+                    </select> --}}
+                    <input type="text" class="form-control" id="term" name="day_id" readonly="readoonly" value="{{ isset($subject->days->day_name) ? $subject->days->day_name:'' }}">
+                </div>
             </div>
             <div class="form-group row ml-5">
                 <label for="term" class="col-sm-2 col-form-label mt-2">เทอม</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="term" name="term" value="{{ isset($subject->term) ? $subject->term:'' }}">
+                    <input type="text" class="form-control" id="term" name="term" readonly="readoonly" value="{{ isset($subject->term) ? $subject->term:'' }}">
                 </div>
             </div>
             <div class="form-group row ml-5">
                 <label for="sect" class="col-sm-2 col-form-label mt-2">เซ็ค</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="sect"  value="{{ isset($subject->sect) ? $subject->sect:'' }}">
+                    <input type="text" class="form-control" id="sect" readonly="readoonly"  value="{{ isset($subject->sect) ? $subject->sect:'' }}">
                 </div>
             </div>
             <div class="form-group row ml-5">
                 <label for="teacher" class="col-sm-2 col-form-label mt-2">อาจารย์</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="teacher" name="stud_id" value="{{ isset($subject->teacher) ? $subject->teacher:'' }}">
+                    <input type="text" class="form-control" id="teacher" name="stud_id" readonly="readoonly" value="{{ isset($subject->teacher) ? $subject->teacher:'' }}">
                 </div>
             </div>
             <div class="d-none">
@@ -75,7 +87,7 @@
             <div class="form-group row ml-5">
                 <label for="teacher" class="col-sm-2 col-form-label mt-2">นักศึกษา</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="teacher"  value="{{ Auth::user()->f_name }}  {{ Auth::user()->l_name }}">
+                    <input type="text" class="form-control" id="teacher" readonly="readonly"  value="{{ Auth::user()->f_name }}  {{ Auth::user()->l_name }}">
                 </div>
             </div>
             

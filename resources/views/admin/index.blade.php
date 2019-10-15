@@ -45,7 +45,7 @@
     <h4 class="mt-5">ข้อมูลส่วนตัว</h4>
     <form action="#">
         <div class="form-group row ml-5">
-            <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสนักศึกษา</label>
+            <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสมาชิก</label>
             <div class="col-sm-10 mt-2">
                 <input type="text" readonly class="form-control-plaintext" id="stud_id" value="{{ Auth::user()->stud_id }}">
             </div>

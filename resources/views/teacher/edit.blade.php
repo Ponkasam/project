@@ -7,7 +7,7 @@
             {{ csrf_field() }}
             {{ method_field('PUT') }}
             <div class="form-group row ml-5">
-                <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสนักศึกษา</label>
+                <label for="stud_id" class="col-sm-2 col-form-label mt-2">รหัสมาชิก</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="stud_id" name="stud_id" value="{{ isset($user->stud_id) ? $user->stud_id: '' }}">
                 </div>

@@ -52,7 +52,7 @@ class AdminController extends Controller
             'password' => Hash::make($item['password']),
             'status_id' => $item['status_id']
         ]);
-        return redirect('admin');
+        return redirect('admin/list');
     }
 
     /**
