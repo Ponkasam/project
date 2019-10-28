@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\DB;
 class Reserve extends Model
 {
     protected $table = 'reserves';
@@ -12,7 +12,8 @@ class Reserve extends Model
         'subject_id','term','YML','stud_id','status_re'
     ];
 
-    public function revers(){
+    public function Subject(){
         return $this->belongsTo('App\Subject','subject_id');
     }
+     
 }

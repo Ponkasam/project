@@ -17,9 +17,14 @@ class ReservaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $subjects = Subject::all();
+    {   
+        $subjects = DB::table('subjects')
+            // ->join('reserves','reserves.subject_id','=','subjects.subject_id')
+            ->get();
+        // $stud_id = Auth::user()->stud_id;
+        // $subjects = Subject::where('stud_id', $stud_id);
         return view('reserve.index',compact('subjects'));
+
     }
 
     /**

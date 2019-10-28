@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-      
+      {{-- {{ Auth::user()->stud_id }} --}}
         <h4 class="mt-2">ข้อมูลรายวิชา</h4>
         <table class="table table-bordered mt-2">
             <thead>
@@ -25,15 +25,25 @@
                         <td>{{ $item->class_room }}</td>
                         <td>{{ $item->teacher }}</td>
                         <td>{{ $item->term }}</td>
+                        
+                        
                         <td>
                             <div class="btn-group" role="group">
-                                
                                 <a href="{{ url('/reserve/'. $item->id .'/create') }}"><button class="btn btn-warning" type="button">จองจ้า</button></a>
-                                
                             </div>
                         </td>
+                        
+                       
                     </tr>
                 @endforeach
+                {{-- @foreach($reserve as $item)
+                    <tr>
+                        @if($item->stud_id == Auth::user()->stud_id)
+                        <td>{{ $item->subject_id }}</td>
+                        <td>{{ $item->stud_id }}</td>
+                        @endif
+                    </tr>
+                @endforeach --}}
             </tbody>
         </table>
     </div>

@@ -3,7 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\DB;
+use Auth;
 class Subject extends Model
 {
     protected $table = 'subjects';
@@ -15,4 +16,8 @@ class Subject extends Model
     public function days(){
         return $this->belongsTo('App\Day','day_id');
     }
+    public function reserve(){
+        return $this->hasOne('App\Reserve','subject_id');
+    }
+    
 }
