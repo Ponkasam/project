@@ -45,7 +45,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('/reserve/show') }}">
+        <a class="nav-link collapsed" href="{{ url('/checkinStudent') }}">
           <i class="fas fa-fw fa-folder"></i>
           <span>ประวัติการเข้าเรียน</span>
         </a>

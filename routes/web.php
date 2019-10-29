@@ -65,6 +65,7 @@ Route::middleware(['auth', 'role:teacher'])->group(function () {
     Route::get('/teacher/confirm', 'teacher\ConfirmController@index'); //พึ่งแก้
     Route::get('/teacher/{id}', 'teacher\ConfirmController@show');
     Route::put('/teacher/{id}', 'teacher\ConfirmController@update');
+    
 
 });
 
@@ -86,4 +87,6 @@ Route::middleware(['auth', 'role:student'])->group(function () {
 
     Route::get('/suggestion', 'student\SuggestionController@index');
     Route::post('/suggestion', 'student\SuggestionController@store');
+
+    Route::get('/checkinStudent', 'CheckinController@index');
 });
