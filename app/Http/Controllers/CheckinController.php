@@ -14,7 +14,8 @@ class CheckinController extends Controller
      */
     public function index()
     {
-        //
+        $checkins = Chackin::all();
+        return view('checkinStudent.index');
     }
 
     /**
