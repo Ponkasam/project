@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Chackin;
 use Illuminate\Http\Request;
 
 class CheckinController extends Controller

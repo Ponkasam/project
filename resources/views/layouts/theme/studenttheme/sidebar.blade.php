@@ -43,6 +43,14 @@
         </a>
       </li>
 
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ url('/reserve/show') }}">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>ประวัติการเข้าเรียน</span>
+        </a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('/suggestion') }}">
           <i class="fas fa-fw fa-folder"></i>
