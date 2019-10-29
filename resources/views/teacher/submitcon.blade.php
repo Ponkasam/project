@@ -8,8 +8,8 @@
         <table class="table table-bordered mt-2">
             <thead>
                 <tr>
+                    <th>รหัสนักศึกษา</th>
                     <th>รหัสวิชา</th>
-                    <th>ชื่อวิชา</th>
                     <th>ห้องเรียน</th>
                     <th>อาจารย์ผู้สอน</th>
                     <th>สถานะ</th>

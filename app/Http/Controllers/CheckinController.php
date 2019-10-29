@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Chackin;
+use Auth;
 use Illuminate\Http\Request;
 
 class CheckinController extends Controller
@@ -14,8 +15,8 @@ class CheckinController extends Controller
      */
     public function index()
     {
-        $checkins = Chackin::all();
-        return view('checkinStudent.index');
+        $checkins = Chackin::all()->where('stud_id','=', Auth::user()->stud_id);
+        return view('checkinStudent.index',compact('checkins'));
     }
 
     /**

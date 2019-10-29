@@ -29,9 +29,9 @@
                             <div class="btn-group" role="group">
                                 <a href="{{ url('/subject/'. $item->id) }}"><button class="btn btn-info" type="button"> แสดง</button></a>
                                 <a href="{{ url('/subject/'. $item->id .'/edit') }}"><button class="btn btn-warning" type="button">แก้ไข</button></a>
-                                <form action="{{ url('/subject/'. $item->id) }}"method="POST">
+                                <form action="{{ url('/subject/'. $item->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    {{ method_field('POST') }}
+                                    {{ method_field('DELETE') }}
                                     <button class="btn btn-danger" type="submit">ลบ</button>
                                 </form>
                             </div>
